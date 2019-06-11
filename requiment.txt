@@ -1,0 +1,19 @@
+Create Github account
+
+- Create new project 'todo-list'
+
+- Create new npmjs.com account
+
+- Create a simple utility project module 'name-npm-util', push to NPM.js.com 
+
+- 'todo-list': Create node.js server use 'https' module. Create following API:
+- GET /todo --> list all to do items
+- POST /todo --> Capture the toto via POST method (can save data any where...) Eg:   {id: 1, name: 'To do 1', description: 'Some desc '}
+- PUT /todo --> Change 1 of the content of a 'todo'
+- DELETE /doto --> Delete 1 'todo'
+
+Push code to Github
+
+
+
+
