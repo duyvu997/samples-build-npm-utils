@@ -42,16 +42,24 @@ server.route({
 
 server.route({
     method:"PUT",
-    path:"/todo",
-    handler: async ()=>{}
+    path:"/todo/{id}",
+    handler: async (request, h)=>{
+        try{
+            let result =  await TodoModel.findByIdAndUpdate(request.params.id,request.payload, {new:true});
+            return h.response(result);
+        }
+        catch(err){
+            return h.response(err).code(500);
+        }
+    }
 });
 
 server.route({
     method:"DELETE",
-    path:"/todo/{name}",
+    path:"/todo/{id}",
     handler: async(request, h)=>{
         try {
-            let result =  TodoModel.findOneAndDelete({name: request.params.name}).exec(function (err, doc){
+            let result =  TodoModel.findOneAndDelete(request.params.id).exec(function (err, doc){
                 doc.remove();
             });
             return h.response(result);
