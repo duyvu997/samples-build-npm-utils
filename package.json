@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/nduy79/samples-build-npm-utils#readme",
   "dependencies": {
-    "@hapi/hapi": "18.3.1",
+    "@hapi/hapi": "18.4.1",
     "hapi-mongo": "0.0.2",
     "install": "0.12.2",
     "mongoose": "5.5.14"
